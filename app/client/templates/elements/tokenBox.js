@@ -33,6 +33,17 @@ Template['elements_tokenBox'].helpers({
     'geoPattern' : function(){
         var pattern = GeoPattern.generate(this.address, {color: '#CCC6C6'});
         return pattern.toDataUrl();
+    },
+    /*
+    * dev-by-greg
+    * 对UGT筛选添加class*/
+    'ifUGT' : function (e) {
+        //remember replace the address
+        if (this.address == '0xe0b7927c4af23765cb51314a0e0521a9645f0e2a') {
+            return "token-ugt";
+        }else {
+            return '';
+        }
     }
 })
 

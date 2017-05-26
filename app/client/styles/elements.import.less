@@ -164,6 +164,17 @@ span.address {
         }
 
     }
+    &.token-ugt {
+        &:hover {
+            .delete-token {
+                transform: rotateY(0);
+                display: none;
+            }
+            .dapp-identicon {
+                transform: rotateY(0);
+            }
+        }
+    }
 
     > .dapp-identicon {
         position: absolute;
