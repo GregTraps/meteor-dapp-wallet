@@ -52,6 +52,10 @@
             </h3>
 
             {{#unless creating}}
+                <span>
+                    {{formattedTokenBalance4UGT}}
+                    <!--dev____添加账户ugt显示-->
+                    </span>
                 {{> elements_balance balance=balance}}
             {{else}}
                 {{#if imported}}

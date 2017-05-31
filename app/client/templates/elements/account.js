@@ -118,6 +118,18 @@ Template['elements_account'].helpers({
                 percent: (confirmations / (blocksForConfirmation)) * 100
             }
             : false;
+    },
+    // 添加UGT余额
+    'formattedTokenBalance4UGT' : function(e){
+        var ugtAddress = '0x9dc1838935e919159259b5ce11df869069e493cd';
+        var query = {address : ugtAddress};
+        query['balances.'+ this._id] = {$exists: true};
+        var ugtToken = Tokens.findOne(query);
+        // console.log(ugtToken);
+        var account = Template.parentData(2);
+        return (ugtToken.balances && Number(ugtToken.balances[account._id]) > 0)
+            ? Helpers.formatNumberByDecimals(ugtToken.balances[account._id], ugtToken.decimals) +' '+ ugtToken.symbol
+            : false;
     }
 });
 
