@@ -50,28 +50,39 @@
                     {{name}}
                 {{/if}}
             </h3>
-
+            <div class="account-content-box">
             {{#unless creating}}
-                <span>
-                    {{formattedTokenBalance4UGT}}
-                    <!--dev____添加账户ugt显示-->
-                    </span>
-                {{> elements_balance balance=balance}}
-            {{else}}
-                {{#if imported}}
-                    <span class="account-balance">{{i18n "wallet.accounts.importing"}} <span>...</span></span>
+                    <!--<span class="ugt-balance">-->
+                         <span class="account-balance">
+                            {{#if formattedTokenBalance4UGT}}
+                                {{formattedTokenBalance4UGT}}
+                            {{else}}
+                                0.00
+                            {{/if}}
+                                <span>ug</span>
+                        </span>
+
+                        <!--dev____添加账户ugt显示-->
+                        <!--</span>-->
+                    {{> elements_balance balance=balance}}
                 {{else}}
-                    <span class="account-balance">{{i18n "wallet.accounts.creating"}} <span>...</span></span>
-                {{/if}}
-            {{/unless}}
-            <!-- {{#if tokens}}
-                {{#each tokens}} 
-                    {{#if formattedCoinBalance}}
-                        <span class="token-balances">{{formattedCoinBalance account}}</span>
+                    {{#if imported}}
+                        <span class="account-balance">{{i18n "wallet.accounts.importing"}} <span>...</span></span>
+                    {{else}}
+                        <span class="account-balance">{{i18n "wallet.accounts.creating"}} <span>...</span></span>
                     {{/if}}
-                {{/each}}
-            {{/if}} -->
-            <span class="account-id {{#if creating}}creating{{/if}}">{{toChecksumAddress address}}</span>                
+                {{/unless}}
+                <!-- {{#if tokens}}
+                    {{#each tokens}}
+                        {{#if formattedCoinBalance}}
+                            <span class="token-balances">{{formattedCoinBalance account}}</span>
+                        {{/if}}
+                    {{/each}}
+                {{/if}} -->
+            </div>
+            <span class="account-id {{#if creating}}creating{{/if}}">{{toChecksumAddress address}}</span>
+
         </a>
+
     {{/with}}
 </template>

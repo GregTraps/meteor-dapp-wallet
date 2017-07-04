@@ -92,11 +92,11 @@ span.address {
         cursor: default;
     }
 
-    &:last-child {
-        flex: 1 0 @gridWidth * 6.5;
-        max-width: @gridWidth * 13.5;
-        margin-right: 0;
-    }
+    //&:last-child {
+    //    flex: 1 0 @gridWidth * 6.5;
+    //    max-width: @gridWidth * 13.5;
+    //    margin-right: 0;
+    //}
 
     &:hover {
         background-color: lighten(@colorBackgroundHeader, 12%);
@@ -126,8 +126,8 @@ span.address {
 
         .delete-token {
             position: absolute;
-            left: 12px;
-            top: 20px;
+            left: 6px;
+            top: 10px;
             background: @colorWhite;
             border-radius: 50%;
             width: @gridWidth;
@@ -159,9 +159,9 @@ span.address {
                 transform: rotateY(180deg);
             }
         }
-        &:last-child {
-            max-width: @gridWidth * 6.5;
-        }
+        //&:last-child {
+        //    max-width: @gridWidth * 6.5;
+        //}
 
     }
     &.token-ugt {
@@ -178,8 +178,8 @@ span.address {
 
     > .dapp-identicon {
         position: absolute;
-        left: 12px;
-        top: 20px;
+        left: 6px;
+        top: 10px;
     }
     .spinner-container {
         position: absolute;
@@ -234,7 +234,7 @@ span.address {
 
     > h3 {
         margin: 0;
-        margin-top: 4px;
+        //margin-top: 0;
         color: @colorLink;
         max-width: @gridWidth*4.4;
         float: left;
@@ -601,4 +601,163 @@ table {
 
 
 
+//customs
+//.wallet-box-list .wallet-box:last-child {
+//    flex: 0;
+//    width: @gridWidth * 6.5;
+//    margin-right: @defaultMargin;
+//}
+.wallet-box-list .wallet-box > h3 {
+    width: 100%;
+    padding: 18px 4px 15px 45px;
+    height: 50px;
+    background-color: #ebeff2;
+    border-bottom: 1px solid #dddddd;
+}
+.wallet-box-list .wallet-box {
+    padding-left: 0;
+    padding-right: 0;
+    //border: 1px solid #dddddd;
+}
+.account-content-box {
+    padding: 0 8%;
+    clear: both;
+}
+.account-content-box > span {
+    display: block;
+    width: 100%;
+    font-size: 32px;
+    color: #000;
+    padding-top: 5px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+}
+.account-content-box > span:first-child {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+}
+.account-content-box > span span {
+    color: #1874db;
+    font-weight: lighter;
+    letter-spacing: normal;
+}
+
+.wallet-box .account-pattern {
+    font-size: 3.4em;
+    background-color: #1874db;
+    font-weight: bolder;
+}
+.wallet-box {
+    color: #1874db;
+    border: solid 1px #dddddd;
+}
+.wallet-box.create h3{
+    color: #1874db;
+    font-size: 1.2em;
+}
+.wallet-box.create {
+    padding-left: 70px;
+}
+.wallet-box.tokens, .wallet-box.create.add-token {
+    background : #ffffff;
+    height: auto;
+    overflow: hidden;
+    width: 300px;
+    max-width: 300px;
+    padding: 10px;
+}
+.wallet-box.tokens > * {
+    padding-left: 60px;
+}
+
+.wallet-box.tokens > h3:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background-color: #ebeff2;
+    top: 0;
+    left: 0;
+    border-right: solid 1px #dddddd;
+}
+.wallet-box.tokens > .dapp-identicon.dapp-small,.wallet-box.tokens > .delete-token{
+    z-index: 200;
+    padding-left: 0;
+    top: 50%;
+    margin-top: -16px;
+    left: 14px;
+}
+.wallet-box.tokens > h3 {
+    background-color: transparent;
+    color: #1874db;
+    padding: 0 0 5px 60px;
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: normal;
+    height: auto;
+    border: none;
+}
+.wallet-box.tokens .account-balance {
+    font-size: 32px;
+    color: #000;
+    font-weight: 300;
+    //letter-spacing: 0.1em;
+}
+
+.wallet-box.create.add-token > h3{
+    color: #1874db;
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: normal;
+    padding: 0 0 0 60px;
+    background-color: transparent;
+    border: none;
+    max-width: 180px;
+    height: auto;
+}
+.account-send-form > div.from-to select {
+    height: 60px;
+    border: solid 1px #dddddd;
+    background-color: #ffffff;
+}
+.dapp-address-input select + .dapp-identicon, .dapp-select-account select + .dapp-identicon {
+    top: 16px;
+}
+.account-send-form > div.from-to .dapp-address-input input,.account-send-form > div > .amount input[type="text"] {
+    height: 60px;
+    border: solid 1px #dddddd;
+    background-color: #ffffff;
+}
+.select-token label,.account-send-form > div .token-ether {
+    height: 60px !important;
+    border: solid 1px #dddddd;
+    background-color: #ffffff;
+}
+.select-token label > span,.account-send-form > div .token-ether > span{
+    font-size: 26px;
+}
+.select-token label,.account-send-form > div .token-ether {
+    align-items: center;
+}
+.account-send-form > div .token-ether {
+    padding-top: 10px !important;
+}
+.wallet-box-list > .wallet-box.create.account {
+    border: dashed 1px #dddddd;
+}
+.wallet-box-list > .wallet-box.create.account .account-pattern{
+    width: 100%;
+    background-color: transparent;
+    color: #1874db;
+    justify-content: center;
+    font-size: 4.6em;
+}
+.wallet-box-list > .wallet-box.create.account > h3 {
+    margin: 0;
+    margin-top: 90px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
 

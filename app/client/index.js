@@ -19,7 +19,7 @@ Meteor.startup(function() {
     //检查Tokens中是否有UGT,没有则添加
     //记得修改下面Tracker中unicornToken的address
     Meteor.setTimeout(function () {
-        var address = '0x9dc1838935e919159259b5ce11df869069e493cd';
+        var address = '0x43ee79e379e7b78d871100ed696e803e7893b644';
             address.toLowerCase().trim();
         var tokenId = Helpers.makeId('token', address);
         // var tips = Tokens.findOne(tokenId) == undefined?'no':'yes';
@@ -28,9 +28,9 @@ Meteor.startup(function() {
             Tokens.upsert(tokenId, {$set: {
                 address: address,
                 name: 'UGT',
-                symbol: '🦄',
+                symbol: 'ug',
                 balances: {},
-                decimals: 4
+                decimals: 8
             }});
         }
     },2000);
@@ -57,14 +57,14 @@ Meteor.startup(function() {
 
             // wait 5s, to allow the tokens to be loaded from the localstorage first
             Meteor.setTimeout(function(){
-                var unicornToken = '0x9dc1838935e919159259b5ce11df869069e493cd';
+                var unicornToken = '0x43ee79e379e7b78d871100ed696e803e7893b644';
                 tokenId = Helpers.makeId('token', unicornToken);
                 Tokens.upsert(tokenId, {$set: {
                     address: unicornToken,
                     name: 'UGT',
-                    symbol: '🦄',
+                    symbol: 'ug',
                     balances: {},
-                    decimals: 0
+                    decimals: 8
                 }});    
             }, 5000);
         }

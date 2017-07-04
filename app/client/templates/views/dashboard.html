@@ -25,7 +25,7 @@
                 {{#each accounts}}
                     {{> elements_account account=_id}}
                 {{/each}}
-            </div>
+
             <!--账户列表-->
 
             {{#if isMist}}
@@ -37,6 +37,7 @@
                 </button>
             {{/if}}
         <!--新增账户按钮-->
+            </div>
 
 
 
@@ -44,34 +45,31 @@
 
             <!--<h2>{{{i18n "wallet.tokens.title"}}}</h2>-->
             <!--DEV添加watch UGT单元-->
-            <h2>查看我的UGT及其他货币</h2>
+            <!--<h2>查看我的UGT及其他代币</h2>-->
+            <!--&lt;!&ndash;<p>&ndash;&gt;-->
+                <!--&lt;!&ndash;{{{i18n "wallet.tokens.description"}}}&ndash;&gt;-->
+            <!--&lt;!&ndash;</p>&ndash;&gt;-->
+            <!--<div class="dapp-clear-fix"></div>-->
 
-            <!--<p>-->
-                <!--{{{i18n "wallet.tokens.description"}}}-->
-            <!--</p>-->
-            <p>UG Token是...some info txt</p>
-            <div class="dapp-clear-fix"></div>
-
-            <div class="wallet-box-list">
-                {{#each tokens}}
-                    {{> elements_tokenBox}}
-                {{/each}}
-            </div>
+            <!--<div class="wallet-box-list">-->
+                <!--{{#each tokens}}-->
+                    <!--{{> elements_tokenBox}}-->
+                <!--{{/each}}-->
+            <!--</div>-->
             <!--查看中的项目列表-->
 
-            <button class="wallet-box create add-token">
-                <div class="account-pattern">
-                    +
-                </div>
-                <h3>{{i18n "wallet.app.buttons.addToken"}}</h3>
-            </button>
+            <!--<button class="wallet-box create add-token">-->
+                <!--<div class="account-pattern">-->
+                    <!--+-->
+                <!--</div>-->
+                <!--<h3>{{i18n "wallet.app.buttons.addToken"}}</h3>-->
+            <!--</button>-->
             <!--查看代币按钮-->
             <br>
 
 
 
             <h2>{{i18n "wallet.accounts.walletsTitle"}}</h2>
-            <h2>dashboard-钱包合约标题</h2>
             {{#if hasMinimumBalance}}
                 <p>
                     {{i18n "wallet.accounts.walletsDescription"}}     

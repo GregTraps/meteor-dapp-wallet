@@ -39,13 +39,13 @@ Template['elements_tokenBox'].helpers({
     * 对UGT筛选添加class*/
     'ifUGT' : function (e) {
         //remember replace the address
-        if (this.address == '0x9dc1838935e919159259b5ce11df869069e493cd') {
+        if (this.address == '0x43ee79e379e7b78d871100ed696e803e7893b644') {
             return "token-ugt";
         }else {
             return '';
         }
     }
-})
+});
 
 
 
